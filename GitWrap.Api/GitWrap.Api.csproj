@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>GitWrap.Api</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="Config\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GitWrap.Application\GitWrap.Application.csproj" />
+      <ProjectReference Include="..\GitWrap.Domain\GitWrap.Domain.csproj" />
+      <ProjectReference Include="..\GitWrap.Infrastructure\GitWrap.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

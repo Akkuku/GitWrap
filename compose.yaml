@@ -1,0 +1,11 @@
+﻿services:
+  api:
+    image: gitwrap-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - ./Config:/Config
